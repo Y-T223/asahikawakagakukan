@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>旭川市博物館 | アイヌ文化と北の暮らしをたどる</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#f3ead9;--paper:#faf4e6;--ink:#2b2118;--navy:#1f2b2a;--gold:#a8812f;--line:#d6c6a4;--muted:#6b5b47}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;background:var(--bg);color:var(--ink);line-height:1.95;letter-spacing:.04em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+h2{font-size:1.6rem;font-weight:600;text-align:center;color:var(--navy);margin-bottom:12px}
+.sub{text-align:center;color:var(--gold);font-size:.8rem;letter-spacing:.35em;margin-bottom:48px}
+.orn{display:block;width:120px;height:1px;background:var(--gold);margin:0 auto 22px;position:relative}
+.orn::after{content:"◆";position:absolute;left:50%;top:-.62em;transform:translateX(-50%);background:var(--bg);padding:0 8px;color:var(--gold);font-size:.7rem}
+.photo{background:linear-gradient(135deg,#cdbb97,#a89368);aspect-ratio:3/2;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;filter:sepia(.28) contrast(1.02)}
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#f6ecd4;background:var(--navy);overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;filter:sepia(.4) brightness(.5)}
+.hero .in{position:relative;padding:24px}
+.hero .en{letter-spacing:.5em;font-size:.75rem;color:#d9bd7a;margin-bottom:24px}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;letter-spacing:.2em;margin-bottom:20px}
+.hero p{font-size:1rem;opacity:.92}
+.frame{position:absolute;inset:18px;border:1px solid rgba(217,189,122,.55);pointer-events:none}
+.frame::before{content:"";position:absolute;inset:6px;border:1px solid rgba(217,189,122,.25)}
+/* intro */
+.intro p{max-width:680px;margin:0 auto 1.4em;text-align:center}
+/* history */
+.history{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.timeline{max-width:640px;margin:0 auto;border-left:1px solid var(--gold);padding-left:28px}
+.timeline div{position:relative;margin-bottom:28px}
+.timeline div::before{content:"";position:absolute;left:-35px;top:.7em;width:11px;height:11px;background:var(--gold);transform:rotate(45deg)}
+.timeline b{display:block;color:var(--gold);font-size:1.15rem}
+/* features */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px}
+.feat.rev .photo{order:2}
+.feat h3{font-size:1.3rem;color:var(--navy);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--gold)}
+.feat small{display:block;color:var(--gold);letter-spacing:.3em;font-size:.75rem;margin-bottom:6px}
+/* voices */
+.voices{background:var(--navy);color:#efe4c9}
+.voices h2{color:#f2e3b8}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{border:1px solid rgba(217,189,122,.5);padding:30px 26px;background:rgba(255,255,255,.04);font-size:.93rem}
+.stars{color:#d9bd7a;letter-spacing:.2em;font-size:1.1rem;margin-bottom:10px}
+/* info */
+.info table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line)}
+.info th,.info td{padding:18px 20px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.info th{width:28%;color:var(--gold);font-weight:600;background:#f0e5cd}
+.info a{color:var(--navy);text-underline-offset:4px}
+.map{margin-top:56px}
+.map iframe{width:100%;height:380px;border:0;display:block;filter:sepia(.3);border:1px solid var(--line)}
+.btn{display:block;width:fit-content;margin:22px auto 0;padding:15px 44px;background:var(--navy);color:#f2e3b8;text-decoration:none;border:1px solid var(--gold);letter-spacing:.2em;transition:.3s}
+.btn:hover{background:var(--gold);color:#fff}
+.sns{display:flex;justify-content:center;gap:22px;margin-top:48px}
+.sns a{width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--navy);transition:.3s}
+.sns a:hover{background:var(--navy);color:#f2e3b8}
+.sns svg{width:24px;height:24px;fill:currentColor}
+footer{text-align:center;padding:36px 12px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:720px){section{padding:60px 0}.feat,.cards{grid-template-columns:1fr}.feat.rev .photo{order:0}.info th,.info td{display:block;width:100%}.info th{border-bottom:0;padding-bottom:4px}.hero{min-height:80vh}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="bg photo"><img src="images/photo1.jpg" alt="旭川市博物館" onerror="this.style.display='none'"></div>
+  <div class="frame"></div>
+  <div class="in">
+    <div class="en">ASAHIKAWA CITY MUSEUM</div>
+    <h1>旭川市博物館</h1>
+    <p>竪穴の暮らし、チセのぬくもり。<br>北の大地の記憶を、実物とともに。</p>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <span class="orn"></span>
+    <h2>北の暮らしに、触れる</h2>
+    <div class="sub">ABOUT</div>
+    <p>旭川市博物館の魅力は、竪穴式住居、アイヌのチセ、屯田兵の家といった住居を復元・移築し、実物を体験できること。</p>
+    <p>写真や資料だけでは伝わらない、土地の人々の息づかいを、館内でゆっくりとお楽しみください。</p>
+  </div>
+</section>
+
+<section class="history">
+  <div class="wrap">
+    <span class="orn"></span>
+    <h2>博物館のあゆみ</h2>
+    <div class="sub">HISTORY</div>
+    <div class="timeline">
+      <div><b>1952年7月10日</b>「旭川市郷土博物館」として開館。旭川市の地域文化の発展を目的に歩みを始めました。</div>
+      <div><b>1972年</b>分館が設置されました。</div>
+      <div><b>1993年</b>旭川大雪クリスタルホールに移転し、現在の姿となりました。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="orn"></span>
+    <h2>館内の見どころ</h2>
+    <div class="sub">HIGHLIGHTS</div>
+    <p style="text-align:center;margin-bottom:56px">館内は上層・下層の2層構造。階ごとに異なる時間旅行をお楽しみいただけます。</p>
+
+    <div class="feat">
+      <div class="photo"><img src="images/photo2.jpg" alt="上層階の展示" onerror="this.style.display='none'"></div>
+      <div>
+        <small>UPPER FLOOR</small>
+        <h3>上層階 ― チセと竪穴式住居</h3>
+        <p>アイヌの伝統的な住居「チセ」や竪穴式住居の模型を通して、実際の生活様式がリアルに再現されています。民族装飾品や武具なども展示されています。</p>
+      </div>
+    </div>
+
+    <div class="feat rev">
+      <div class="photo"><img src="images/photo3.jpg" alt="地下階の展示" onerror="this.style.display='none'"></div>
+      <div>
+        <small>LOWER FLOOR</small>
+        <h3>地下階 ― 北の自然と生きもの</h3>
+        <p>旭川周辺の自然環境や動植物について学べます。野鳥のはく製展示もあり、バードウォッチング愛好者にも人気です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <span class="orn" style="background:#d9bd7a"></span>
+    <h2>ご来館の声</h2>
+    <div class="sub">VOICES</div>
+    <div class="cards">
+      <div class="card">
+        <div class="stars">★★★★☆</div>
+        <p>平日の夕方に訪問。ゆっくり観る時間はなかったが、楽しめた。詳しく説明をみたい人のために、A4の用紙に解説が書かれており、自由に持ち帰れる。館内は涼しく、そんなに広くはないので短時間で観てまわれます。</p>
+      </div>
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <p>300円ちょっとで入れる博物館とは思えないほど、展示が精緻で高レベル。小一時間程度あればだいたい観れるので、旭川にお寄りの際は是非おすすめ。平日行きましたがめちゃくちゃ空いてて、ゆっくり堪能できました。<br>1Fはアイヌ文化中心、地下は縄文から戦後までの文化と、自然史や生物学的な展示もあり、バラエティに富んでいる。強いて言えば、旭川の代名詞のひとつである第7師団の情報が薄めなのが、ちょっと残念。そこは割り切って北鎮記念館のほうに征かれたい。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <span class="orn"></span>
+    <h2>施設案内</h2>
+    <div class="sub">INFORMATION</div>
+    <table>
+      <tr><th>施設名</th><td>旭川市博物館</td></tr>
+      <tr><th>住所</th><td>旭川市神楽3条7丁目</td></tr>
+      <tr><th>休館日</th><td>第2・第4月曜日（月曜日が祝日の場合は翌日の火曜日）、年末年始（12月30日〜1月4日）<br>※6月から9月までの間は無休</td></tr>
+      <tr><th>公式サイト</th><td><a href="https://www.city.asahikawa.hokkaido.jp/hakubutukan/" target="_blank" rel="noopener">https://www.city.asahikawa.hokkaido.jp/hakubutukan/</a></td></tr>
+      <tr><th>お問い合わせ</th><td><a href="https://www.city.asahikawa.hokkaido.jp/inquiry/mailform85450000_85450500.html" target="_blank" rel="noopener">お問い合わせフォーム</a></td></tr>
+    </table>
+
+    <div class="map">
+      <iframe title="旭川市博物館の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%E6%97%AD%E5%B7%9D%E5%B8%82%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E6%97%AD%E5%B7%9D%E5%B8%82%E7%A5%9E%E6%A5%BD3%E6%9D%A17%E4%B8%81%E7%9B%AE&output=embed"></iframe>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E5%B7%9D%E5%B8%82%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E6%97%AD%E5%B7%9D%E5%B8%82%E7%A5%9E%E6%A5%BD3%E6%9D%A17%E4%B8%81%E7%9B%AE" target="_blank" rel="noopener">Googleマップで開く</a>
+    </div>
+
+    <div class="sns">
+      <a href="https://www.instagram.com/asahikawa_city_museum/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>© 旭川市博物館 ASAHIKAWA CITY MUSEUM</footer>
+</body>
+</html>
